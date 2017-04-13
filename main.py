@@ -121,8 +121,8 @@ class Level():
     def draw(self, screen):
         screen.fill(BLACK)
 
-        self.platform_list.draw()
-        self.enemy_list.draw()
+        self.platform_list.draw(screen)
+        self.enemy_list.draw(screen)
 
     def shift_world(self, shift_x):
         self.world_shift = shift_x
@@ -253,5 +253,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
