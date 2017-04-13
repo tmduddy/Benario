@@ -119,7 +119,7 @@ class Level():
         self.enemy_list.update()
 
     def draw(self, screen):
-        screen.fill(BLACK)
+        screen.fill(WHITE)
 
         self.platform_list.draw(screen)
         self.enemy_list.draw(screen)
