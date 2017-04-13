@@ -50,16 +50,16 @@ class Player(pygame.sprite.Sprite):
 
         for block in block_hit_list:
             if self.change_y > 0:
-                self.rect.bottom = self.block.top
+                self.rect.bottom = block.rect.top
             elif self.change_y < 0:
-                self.rect.top = self.block.bottom
+                self.rect.top = block.rect.bottom
 
             self.change_y = 0
 
     def calc_gravity(self):
         if self.change_y == 0:
             self.change_y = 1
-        else: self.change_y = 0.35
+        else: self.change_y += 0.35
 
         # check if we're on the ground or not #
         if self.rect.y >= SCREEN_HEIGHT - self.rect.height and self.change_y >= 0:
