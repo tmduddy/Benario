@@ -40,8 +40,8 @@ class Player(pygame.sprite.Sprite):
 
         self.rect.x += self.change_x
         block_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
-        for block in block_hit_list:
-            self.rect.y += self.change_y
+
+        self.rect.y += self.change_y
 
         for block in block_hit_list:
             if self.change_y > 0:
